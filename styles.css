@@ -1,0 +1,48 @@
+body {
+  counter-reset: section;
+  background-color: #60377b;
+}
+
+#mytitle {
+  color: Orange;
+  font-size: 200%;
+  font-weight: bold;
+  text-align: center;
+}
+
+#mysubtitle {
+  color: Orange;
+  font-size:160%;
+  font-weight: bold;
+  text-align: center;
+}
+
+h1:before {
+  counter-increment: section;
+  content: counter(section) " "; font-weight: bold;
+}
+h1 {
+  counter-reset: subsection;
+  color: #ffcc00;
+}
+
+h2:before {
+  counter-increment: subsection;
+  content: counter(section) "." counter(subsection) " ";
+}
+h2 {
+  counter-reset: subsubsection;
+  color: #d65cad;
+}
+
+h3:before {
+  counter-increment: subsubsection;
+  content: counter(section) "." counter(subsection) "." counter(subsubsection) " ";
+}
+h3 {
+  color: CadetBlue;
+}
+
+p {
+  color: CornSilk;
+}
